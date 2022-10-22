@@ -8,6 +8,15 @@ const d$todo = defineStore({
         list: [],
     }),
     actions: {
+        async a$list() {
+          try {
+            const { data } = await s$todo.list();
+            this.list = data;
+          } catch (e) {
+            console.error("actions todo list error", e);
+            throw e;
+          }
+        },
         async a$add(body) {
             try {
               await s$todo.add(body);
