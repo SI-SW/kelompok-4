@@ -17,6 +17,17 @@
       </li>
       <li class="nav-item">
         <sidenav-item
+          url="/dashboard/todo"
+          :class="getRoute() === 'todo' ? 'active' : ''"
+          :navText="'To Do'"
+        >
+          <template v-slot:icon>
+            <i class="ni ni-check-bold text-primary text-sm opacity-10"></i>
+          </template>
+        </sidenav-item>
+      </li>
+      <li class="nav-item">
+        <sidenav-item
           url="/dashboard/tables"
           :class="getRoute() === 'tables' ? 'active' : ''"
           :navText="this.$store.state.isRTL ? 'الجداول' : 'Tables'"
