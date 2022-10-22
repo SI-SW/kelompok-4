@@ -16,6 +16,14 @@ const d$todo = defineStore({
               throw e;
             }
         },
+        async a$del(id) {
+          try {
+            await s$todo.del(id);
+          } catch (e) {
+            console.error('actions to do edit error', e);
+            throw e;
+          }
+        },
     },
     getters: {
         
