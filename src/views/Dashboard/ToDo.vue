@@ -23,8 +23,13 @@ export default {
       }
     },
   },
-  async created() {
-    await this.getList();
+  async delTodo() {
+    try {
+      await this.a$del(this.input.id);
+      await this.getList();
+    } catch (e) {
+      console.error("methods delTodo error", e);
+    }
   },
 };
 </script>
