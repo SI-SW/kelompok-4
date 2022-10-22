@@ -31,6 +31,9 @@ export default {
       console.error("methods delTodo error", e);
     }
   },
+  async created() {
+    await this.getList();
+  },
 };
 </script>
 
