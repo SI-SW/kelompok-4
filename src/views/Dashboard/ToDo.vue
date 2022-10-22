@@ -15,7 +15,16 @@ export default {
   }),
   methods: {
     ...mapActions(d$todo, ["a$list", "a$add", "a$del", "a$edit"]),
-
+    async getList() {
+      try {
+        await this.a$list();
+      } catch (e) {
+        console.error("methods getList error", e);
+      }
+    },
+  },
+  async created() {
+    await this.getList();
   },
 };
 </script>
