@@ -61,6 +61,9 @@
 </template>
 
 <script>
+import { mapActions } from 'pinia';
+import d$auth from '@/stores/auth';
+
 import Navbar from "@/examples/PageLayout/Navbar.vue";
 import AppFooter from "@/examples/PageLayout/Footer.vue";
 import ArgonInput from "@/components/ArgonInput.vue";
@@ -69,13 +72,32 @@ import ArgonButton from "@/components/ArgonButton.vue";
 const body = document.getElementsByTagName("body")[0];
 
 export default {
-  name: "signin",
+  name: "signup",
   components: {
     Navbar,
     AppFooter,
     ArgonInput,
     ArgonCheckbox,
     ArgonButton,
+  },
+  data: () => ({
+    // input
+    input: {
+      name: '',
+      email: '',
+      password: '',
+    },
+  }),
+  methods: {
+    ...mapActions(d$auth, ['a$signup']),
+    async submitSignup() {
+      try {
+        await this.a$signup({ ...this.input });
+        this.$router.replace({ name: 'Signin' });
+      } catch (e) {
+        console.error(e);
+      }
+    },
   },
   created() {
     this.$store.state.hideConfigButton = true;

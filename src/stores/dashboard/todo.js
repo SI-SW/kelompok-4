@@ -25,6 +25,7 @@ const d$todo = defineStore({
               throw e;
             }
         },
+
         async a$del(id) {
           try {
             await s$todo.del(id);
@@ -33,9 +34,18 @@ const d$todo = defineStore({
             throw e;
           }
         },
+
+        async a$edit(id, body) {
+          try {
+            await s$todo.edit(id, body);
+            await this.getList();
+        } catch (e) {
+            console.error("methods editTodo error", e);
+        }
+        },
     },
     getters: {
-        
+        g$list: ({ list }) => list,
     },
 });
 
