@@ -54,7 +54,7 @@ export default {
         <div class="w-50 d-flex m-auto mt-3">  
           <input class="btn btn-success mx-2 px-5 ms-auto" type="button" value="Add">
           <input class="btn btn-primary mx-2 px-5" type="button" value="Edit">
-          <input class="btn btn-danger mx-2 px-5 me-auto" type="button" value="Delete">
+          <input class="btn btn-danger mx-2 px-5 me-auto" type="button" value="Delete" @click.prevent="delTodo">
         </div>
         <p class="text-center text-xs">keterangan :
           <br/>Add memerlukan name, description, dan category
