@@ -38,7 +38,6 @@ const d$todo = defineStore({
         async a$edit(id, body) {
           try {
             await s$todo.edit(id, body);
-            await this.getList();
         } catch (e) {
             console.error("methods editTodo error", e);
         }
