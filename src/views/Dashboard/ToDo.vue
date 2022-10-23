@@ -79,7 +79,26 @@ export default {
               <th class="text-secondary opacity-7"></th>
             </tr>
           </thead>
-          
+          <tbody>
+            <tr v-for="(item, index) in g$list" :keys="index">
+              <td>
+                <h6 class="mb-0 text-sm ps-3">{{ item.id }}</h6>
+              </td>
+              <td>
+                <h6 class="mb-0 text-sm">{{ item.name }}</h6>
+              </td>
+              <td>
+                <h6 class="mb-0 text-sm">{{ item.description }}</h6>
+              </td>
+              <td class="align-middle text-center text-sm">
+                <span v-if="item.status == 'done'" class="badge badge-sm bg-gradient-success">{{ item.status }}</span>
+                <span v-else class="badge badge-sm bg-gradient-secondary">{{ item.status }}</span>
+              </td>
+              <td>
+                <h6 class="text-center mb-0 text-sm">{{ item.createdAt }}</h6>
+              </td>
+            </tr>
+          </tbody>
         </table>
   </div>
 </template>
