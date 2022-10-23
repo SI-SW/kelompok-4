@@ -5,6 +5,7 @@ const dashboard = {
   children: [
     {
       path: "",
+      alias: "/",
       name: "Default",
       component: () => import('@/views/Dashboard/Default.vue'),
       meta: { auth: true },
