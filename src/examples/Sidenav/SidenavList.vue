@@ -17,6 +17,17 @@
       </li>
       <li class="nav-item">
         <sidenav-item
+          url="/dashboard/todo"
+          :class="getRoute() === 'todo' ? 'active' : ''"
+          :navText="'To Do'"
+        >
+          <template v-slot:icon>
+            <i class="ni ni-check-bold text-primary text-sm opacity-10"></i>
+          </template>
+        </sidenav-item>
+      </li>
+      <li class="nav-item">
+        <sidenav-item
           url="/dashboard/tables"
           :class="getRoute() === 'tables' ? 'active' : ''"
           :navText="this.$store.state.isRTL ? 'الجداول' : 'Tables'"
@@ -66,7 +77,7 @@
           </template>
         </sidenav-item>
       </li>
-      <li class="nav-item">
+      <li v-if="!signed" class="nav-item">
         <sidenav-item
           url="/auth/signin"
           :class="getRoute() === 'signin' ? 'active' : ''"
@@ -77,7 +88,7 @@
           </template>
         </sidenav-item>
       </li>
-      <li class="nav-item">
+      <li v-if="!signed" class="nav-item">
         <sidenav-item
           url="/auth/signup"
           :class="getRoute() === 'signup' ? 'active' : ''"
@@ -92,9 +103,7 @@
         <div class="nav-link">
           <div class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
             <slot name="icon">
-              <template>
-              <i class="ni ni-collection text-info text-sm opacity-10"></i>
-              </template>
+              <i class="ni ni-user-run text-info text-sm opacity-10"></i>
             </slot>
           </div>
           <span class="nav-link-text ms-1">Sign Out</span>
@@ -110,6 +119,9 @@ import SidenavItem from "./SidenavItem.vue";
 import SidenavCard from "./SidenavCard.vue";
 import { mapActions } from 'pinia';
 import d$auth from '@/stores/auth';
+import { certCookies } from "@/plugins/cookies";
+
+const { id } = certCookies();
 
 export default {
   name: "SidenavList",
@@ -118,6 +130,7 @@ export default {
   },
   data() {
     return {
+      signed: id,
       title: "Argon Dashboard 2",
       controls: "dashboardsExamples",
       isActive: "active"
@@ -144,3 +157,8 @@ export default {
   }
 };
 </script>
+<style>
+li.nav-item {
+  cursor: pointer;
+}
+</style>
