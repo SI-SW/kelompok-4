@@ -41,6 +41,13 @@ const d$auth = defineStore({
         throw message ?? error;
       }
     },
+    async a$signup(body) {
+      try {
+        await s$auth.signup(body);
+      } catch ({ error, message }) {
+        throw message ?? error;
+      }
+    }
   },
   getters: {
     g$user: ({ id, name, role }) => ({ id, name, role }),

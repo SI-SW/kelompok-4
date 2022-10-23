@@ -4,6 +4,9 @@ import d$todo from "@/stores/dashboard/todo";
 
 export default {
   name: "ToDo",
+  computed: {
+    ...mapState(d$todo, ["g$list"]),
+  },
   data: () => ({
     input: {
       id: "",

@@ -25,6 +25,7 @@ const d$todo = defineStore({
               throw e;
             }
         },
+
         async a$del(id) {
           try {
             await s$todo.del(id);
@@ -35,7 +36,7 @@ const d$todo = defineStore({
         },
     },
     getters: {
-        
+        g$list: ({ list }) => list,
     },
 });
 
