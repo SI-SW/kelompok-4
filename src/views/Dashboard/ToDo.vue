@@ -59,7 +59,7 @@ export default {
 <template>
   <div class="card px-3 pb-3">
     <div class="card-header pb-0">
-        <h6>To Do</h6>
+        <h6>Kelompok 4</h6>
     </div>
     <form>
         <input class="form-control w-50 m-auto mb-2" v-model="input.id" type="text" name="" id="" placeholder="id"/>
