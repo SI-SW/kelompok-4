@@ -1,14 +1,14 @@
 const auth = {
-  path: '/',
+  path: '/auth',
   name: 'Auth',
   children: [
     {
-      path: "/auth/signin",
+      path: "signin",
       name: "Signin",
       component: () => import('@/views/Auth/Signin.vue'),
     },
     {
-      path: "/auth/signup",
+      path: "signup",
       name: "Signup",
       component: () => import('@/views/Auth/Signup.vue'),
     },

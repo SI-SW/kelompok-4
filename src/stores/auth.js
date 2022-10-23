@@ -31,6 +31,7 @@ const d$auth = defineStore({
         this.a$setUser();
         return true;
       } catch ({ error, message }) {
+        alert("Login Gagal!")
         throw message ?? error;
       }
     },
