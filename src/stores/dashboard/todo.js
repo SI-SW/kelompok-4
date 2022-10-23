@@ -9,13 +9,13 @@ const d$todo = defineStore({
     }),
     actions: {
         async a$list() {
-            try {
-                const { data } = await s$todo.list();
-                this.list = data;
-            }   catch (e) {
-                console.error('actions todo list error', JSON.stringify(e));
-                throw e;
-            }
+          try {
+            const { data } = await s$todo.list();
+            this.list = data;
+          } catch (e) {
+            console.error("actions todo list error", e);
+            throw e;
+          }
         },
         async a$add(body) {
             try {
@@ -25,21 +25,14 @@ const d$todo = defineStore({
               throw e;
             }
         },
-          async a$del(id) {
-            try {
-              await s$todo.del(id);
-            } catch (e) {
-              console.error('actions todo del error', e);
-              throw e;
-            }
-        },
-          async a$edit(id, body) {
-            try {
-              await s$todo.edit(id, body);
-            } catch (e) {
-              console.error('actions todo edit error', e);
-              throw e;
-            }
+
+        async a$del(id) {
+          try {
+            await s$todo.del(id);
+          } catch (e) {
+            console.error('actions to do edit error', e);
+            throw e;
+          }
         },
     },
     getters: {

@@ -157,6 +157,7 @@ export default {
   }
 };
 </script>
+
 <style>
 li.nav-item {
   cursor: pointer;
