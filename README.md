@@ -38,17 +38,22 @@ Let us know your thoughts below. And good luck with development!
 
 ## Table of Contents
 
-- [Versions](#versions)
-- [Demo](#demo)
-- [Quick Start](#quick-start)
-- [Documentation](#documentation)
-- [File Structure](#file-structure)
-- [Browser Support](#browser-support)
-- [Resources](#resources)
-- [Reporting Issues](#reporting-issues)
-- [Technical Support or Questions](#technical-support-or-questions)
-- [Licensing](#licensing)
-- [Useful Links](#useful-links)
+- [Vue Argon Dashboard 2 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https://www.creative-tim.com/product/vue-argon-dashboard&text=Check%20Vue%Argon%20Dashboard%20made%20by%20@CreativeTim%20#webdesign%20#dashboard%20#argondesign%20#vue%20https://www.creative-tim.com/product/vue-argon-dashboard)](#vue-argon-dashboard-2-)
+      - [Special thanks](#special-thanks)
+  - [Table of Contents](#table-of-contents)
+  - [Versions](#versions)
+  - [Demo](#demo)
+  - [Quick start](#quick-start)
+  - [Terminal Commands](#terminal-commands)
+  - [Documentation](#documentation)
+    - [What's included](#whats-included)
+  - [Browser Support](#browser-support)
+  - [Resources](#resources)
+  - [Reporting Issues](#reporting-issues)
+  - [Technical Support or Questions](#technical-support-or-questions)
+  - [Licensing](#licensing)
+  - [Useful Links](#useful-links)
+        - [Social Media](#social-media)
 
 ## Versions
 
@@ -202,4 +207,3 @@ Dribbble: <https://dribbble.com/creativetim>
 Google+: <https://plus.google.com/+CreativetimPage>
 
 Instagram: <https://instagram.com/creativetimofficial>
-# Dashboard-Abiyyu

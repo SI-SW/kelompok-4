@@ -98,7 +98,7 @@ export default {
   data: () => ({
     // input
     input: {
-      name: '',
+      username: '',
       password: '',
     },
   }),
